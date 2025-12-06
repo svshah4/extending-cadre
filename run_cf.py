@@ -36,7 +36,7 @@ parser.add_argument("--attention_head", help="number of attention heads", type=i
 parser.add_argument("--hidden_dim_enc", help="dimension of hidden layer in encoder", type=int, default=200) #200
 parser.add_argument("--use_hid_lyr", help="whether to use hidden layer in the encoder or not", type=bool_ext, default=False)
 
-parser.add_argument("--max_iter", help="maximum number of training iterations", type=int, default=int(384000))
+parser.add_argument("--max_iter", help="maximum number of training iterations", type=int, default=int(80))
 parser.add_argument("--dropout_rate", help="probability of an element to be zero-ed", type=float, default=0.6)#0.3
 
 parser.add_argument("--learning_rate", help="learning rate for Adam", type=float, default=0.3)
