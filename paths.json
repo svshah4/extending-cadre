@@ -1,6 +1,5 @@
 {
-    "data_dir": "gdsc_preprocessing/",
-    "results_dir": "results/",
-    "figures_dir": "figures/",
-    "models_dir": "models/"
+  "input_data_dir": "data/input",
+  "output_data_dir": "data/output",
+  "model_dir": "models"
 }
