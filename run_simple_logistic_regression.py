@@ -26,7 +26,7 @@ for drug_idx in range(y_train.shape[1]):
     y_test_drug = y_test[:, drug_idx]
     
     # Train logistic regression
-    lr = LogisticRegression(max_iter=1000, random_state=42)
+    lr = LogisticRegression(max_iter=10000, random_state=42)
     lr.fit(X_train, y_train_drug)
     
     # Predict
