@@ -218,8 +218,8 @@ class CF(Base):
 
         precision, recall, f1score, accuracy, auc = evaluate(tgts, msks, prds, epsilon=self.epsilon)
 
-        print("[%d,%d] | tst f1:%.1f, auc:%.1f | trn f1:%.1f, auc:%.1f, loss:%.3f"%( iter_train//len(self.rng_train),
-              iter_train%len(self.rng_train), 100.0*f1score, 100.0*auc, 100.0*f1score_train, 100.0*auc_train,
+        print("[%d,%d] | tst f1:%.1f, auc:%.1f, acc:%.1f | trn f1:%.1f, auc:%.1f, acc:%.1f loss:%.3f"%( iter_train//len(self.rng_train),
+              iter_train%len(self.rng_train), 100.0*f1score, 100.0*auc, 100.0*accuracy, 100.0*f1score_train, 100.0*auc_train, 100.0*accuracy_train,
               np.mean(losses)))
 
         logs["iter"].append(iter_train)
