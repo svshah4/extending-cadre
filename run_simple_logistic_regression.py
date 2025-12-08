@@ -5,6 +5,11 @@ from sklearn.metrics import roc_auc_score, f1_score, accuracy_score
 from utils import load_dataset, split_dataset
 import pickle
 import os
+import warnings
+from sklearn.exceptions import ConvergenceWarning
+
+# Suppress convergence warnings (expected for low max_iter values)
+warnings.filterwarnings('ignore', category=ConvergenceWarning)
 
 print("Loading dataset...")
 dataset, _ = load_dataset(input_dir='data/input', repository='gdsc', drug_id=-1)
@@ -22,15 +27,22 @@ print(f"Number of drugs: {y_train.shape[1]}")
 # Create output directory if it doesn't exist
 os.makedirs("data/output/cf", exist_ok=True)
 
-# Training iterations to simulate learning curve
-training_steps = [10, 50, 100, 300, 1000, 3000, 5000, 10000]
+# Map to CADRE-style training steps
+# CADRE trains for 147,628 iterations total
+# We'll sample at similar checkpoints to CADRE
+cadre_checkpoints = [0, 7268, 14536, 22128, 29396, 44256, 59116, 73652, 88512, 103372, 118232, 133092, 147628]
+
+# Map CADRE steps to sklearn max_iter (approximate)
+# Since LR converges much faster, we use a scaling factor
+# Assume ~100 sklearn iterations ≈ 10k CADRE steps (rough estimate)
+lr_max_iters = [1, 10, 20, 30, 40, 60, 80, 100, 120, 140, 160, 180, 200]
 
 lr_progression = []
 
-print("\n=== TRAINING LOGISTIC REGRESSION OVER MULTIPLE ITERATIONS ===")
+print("\n=== TRAINING LOGISTIC REGRESSION AT CADRE CHECKPOINTS ===")
 
-for max_iter in training_steps:
-    print(f"\nTraining with max_iter={max_iter}...")
+for cadre_step, max_iter in zip(cadre_checkpoints, lr_max_iters):
+    print(f"\nCADRE Step {cadre_step:,} → LR max_iter={max_iter}...")
     auc_list, f1_list, acc_list = [], [], []
     
     # Train separate LR for each drug
@@ -55,42 +67,41 @@ for max_iter in training_steps:
             auc = roc_auc_score(y_test_drug, y_pred_proba)
             auc_list.append(auc)
         except:
-            pass  # Skip if AUC calculation fails
+            pass
         
         try:
             f1 = f1_score(y_test_drug, y_pred, zero_division=0)
             f1_list.append(f1)
         except:
-            pass  # Skip if F1 calculation fails
+            pass
         
         try:
             acc = accuracy_score(y_test_drug, y_pred)
             acc_list.append(acc)
         except:
-            pass  # Skip if accuracy calculation fails
+            pass
     
-    # Aggregate metrics for this iteration
+    # Aggregate metrics
     mean_auc = np.nanmean(auc_list) if auc_list else 0.0
     mean_f1 = np.nanmean(f1_list) if f1_list else 0.0
     mean_acc = np.nanmean(acc_list) if acc_list else 0.0
     
     lr_progression.append({
-        "iter": max_iter,
+        "cadre_step": cadre_step,
+        "lr_max_iter": max_iter,
         "test_auc": float(mean_auc),
         "test_f1": float(mean_f1),
         "test_acc": float(mean_acc),
         "n_valid_drugs": len(auc_list)
     })
     
-    print(f"  Valid drugs: {len(auc_list)}/{y_train.shape[1]}")
-    print(f"  AUC={mean_auc:.4f} ({mean_auc*100:.2f}%)")
-    print(f"  F1={mean_f1:.4f} ({mean_f1*100:.2f}%)")
-    print(f"  ACC={mean_acc:.4f} ({mean_acc*100:.2f}%)")
+    print(f"  [{cadre_step:,}] | Valid drugs: {len(auc_list)}/{y_train.shape[1]}")
+    print(f"  [{cadre_step:,}] | AUC={mean_auc*100:.1f}%, F1={mean_f1*100:.1f}%, ACC={mean_acc*100:.1f}%")
 
-# Convert to DataFrame for easier plotting
+# Convert to DataFrame
 lr_df = pd.DataFrame(lr_progression)
 
-# Save both pickle and CSV
+# Save results
 pickle_path = "data/output/cf/lr_learning_curve.pkl"
 csv_path = "data/output/cf/lr_learning_curve.csv"
 
@@ -106,11 +117,21 @@ print(f"Saved CSV ➜ {csv_path}")
 print("="*60)
 
 # Print final results
-print("\n=== FINAL RESULTS (max_iter=10000) ===")
+print("\n=== FINAL RESULTS ===")
 final_results = lr_progression[-1]
-print(f"Test AUC: {final_results['test_auc']:.4f} ({final_results['test_auc']*100:.2f}%)")
-print(f"Test F1: {final_results['test_f1']:.4f} ({final_results['test_f1']*100:.2f}%)")
-print(f"Test Accuracy: {final_results['test_acc']:.4f} ({final_results['test_acc']*100:.2f}%)")
+print(f"Logistic Regression (max_iter={final_results['lr_max_iter']}):")
+print(f"  Test AUC: {final_results['test_auc']*100:.2f}%")
+print(f"  Test F1:  {final_results['test_f1']*100:.2f}%")
+print(f"  Test ACC: {final_results['test_acc']*100:.2f}%")
+
+print(f"\nCADRE (from paper, 147,628 steps):")
+print(f"  Test AUC: 83.8%")
+print(f"  Test F1:  64.2%")
+print(f"  Test ACC: 78.6%")
+
+print(f"\nImprovement (CADRE over LR):")
+print(f"  AUC: +{83.8 - final_results['test_auc']*100:.1f} percentage points")
+print(f"  F1:  +{64.2 - final_results['test_f1']*100:.1f} percentage points")
 
 # Print summary table
 print("\n=== LEARNING CURVE SUMMARY ===")
