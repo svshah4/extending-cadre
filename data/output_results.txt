@@ -1,0 +1,218 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 LMRoman10-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red203\green203\blue202;
+\red212\green212\blue212;\red167\green197\blue151;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c83320\c83320\c83112;
+\cssrgb\c86465\c86464\c86248;\cssrgb\c71035\c80830\c65726;\cssrgb\c0\c0\c0;}
+\margl1440\margr1440\vieww16900\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs30 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 python run_cf\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec4 py --repository gdsc --max_iter \cf2 \cb3 \strokec6 50000\cf2 \cb3 \strokec4  --test_inc_size \cf2 \cb3 \strokec6 5000\cf2 \cb3 \strokec7 \
+\cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 [0,0] | tst f1:40.8, auc:51.6 | trn f1:44.6, auc:52.3, loss:5.902\cf2 \cb3 \
+\cf2 \cb3 [7,268] | tst f1:49.2, auc:64.2 | trn f1:48.6, auc:62.0, loss:1.377\cf2 \cb3 \
+\cf2 \cb3 [14,536] | tst f1:55.3, auc:73.8 | trn f1:53.9, auc:70.5, loss:0.624\cf2 \cb3 \
+\cf2 \cb3 [22,128] | tst f1:58.0, auc:77.3 | trn f1:62.3, auc:80.3, loss:0.506\cf2 \cb3 \
+\cf2 \cb3 [29,396] | tst f1:59.2, auc:79.1 | trn f1:65.2, auc:82.8, loss:0.469\cf2 \cb3 \
+\cf2 \cb3 [36,664] | tst f1:59.8, auc:80.2 | trn f1:66.5, auc:84.0, loss:0.453\cf2 \cb3 \
+\cf2 \cb3 [44,256] | tst f1:60.8, auc:80.9 | trn f1:67.3, auc:85.0, loss:0.437\cf2 \cb3 \
+\cf2 \cb3 [51,524] | tst f1:61.3, auc:81.5 | trn f1:68.0, auc:85.5, loss:0.428\cf2 \cb3 \
+\cf2 \cb3 [59,116] | tst f1:62.0, auc:81.9 | trn f1:68.6, auc:86.0, loss:0.422\cf2 \cb3 \
+\cf2 \cb3 [66,384] | tst f1:63.3, auc:82.4 | trn f1:69.1, auc:86.5, loss:0.415\cf2 \cb3 \
+\cf2 \cb3 [73,652] | tst f1:63.2, auc:82.5 | trn f1:69.3, auc:86.7, loss:0.412\cf2 \cb3 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 python run_cf\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec4 py --repository gdsc --max_iter \cf2 \cb3 \strokec6 22128\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 [0,0] | tst f1:36.3, auc:48.9, acc:49.6 | trn f1:33.2, auc:48.4, acc:49.6 loss:6.335\cf2 \cb3 \
+\cf2 \cb3 [1,348] | tst f1:45.7, auc:62.2, acc:61.7 | trn f1:43.0, auc:55.5, acc:56.7 loss:3.817\cf2 \cb3 \
+\cf2 \cb3 [3,20] | tst f1:45.7, auc:62.7, acc:62.6 | trn f1:49.7, auc:64.9, acc:64.4 loss:0.724\cf2 \cb3 \
+\cf2 \cb3 [4,368] | tst f1:47.0, auc:64.0, acc:63.6 | trn f1:49.9, auc:66.0, acc:65.0 loss:0.719\cf2 \cb3 \
+\cf2 \cb3 [6,40] | tst f1:46.5, auc:64.0, acc:63.5 | trn f1:50.5, auc:66.4, acc:65.4 loss:0.716\cf2 \cb3 \
+\cf2 \cb3 [7,388] | tst f1:47.4, auc:64.9, acc:64.2 | trn f1:50.9, auc:66.8, acc:65.7 loss:0.721\cf2 \cb3 \
+\cf2 \cb3 [9,60] | tst f1:47.2, auc:64.9, acc:64.6 | trn f1:51.0, auc:67.5, acc:66.4 loss:0.707\cf2 \cb3 \
+\cf2 \cb3 [10,408] | tst f1:49.0, auc:67.8, acc:67.0 | trn f1:51.6, auc:67.0, acc:67.2 loss:0.658\cf2 \cb3 \
+\cf2 \cb3 [12,80] | tst f1:51.6, auc:71.4, acc:70.1 | trn f1:55.3, auc:73.6, acc:71.0 loss:0.583\cf2 \cb3 \
+\cf2 \cb3 [13,428] | tst f1:53.6, auc:73.4, acc:72.1 | trn f1:58.6, auc:77.1, acc:74.2 loss:0.547\cf2 \cb3 \
+\cf2 \cb3 [15,100] | tst f1:55.3, auc:75.1, acc:73.4 | trn f1:61.0, auc:78.9, acc:76.0 loss:0.524\cf2 \cb3 \
+\cf2 \cb3 [16,448] | tst f1:55.9, auc:76.0, acc:74.2 | trn f1:62.6, auc:80.5, acc:77.6 loss:0.504\cf2 \cb3 \
+\cf2 \cb3 [18,120] | tst f1:56.6, auc:76.5, acc:74.5 | trn f1:64.2, auc:81.4, acc:78.5 loss:0.495\cf2 \cb3 \
+\cf2 \cb3 [19,468] | tst f1:57.5, auc:77.0, acc:75.4 | trn f1:64.8, auc:82.0, acc:78.9 loss:0.484\cf2 \cb3 \
+\cf2 \cb3 [21,140] | tst f1:58.0, auc:77.5, acc:75.6 | trn f1:65.1, auc:82.4, acc:79.2 loss:0.479\cf2 \cb3 \
+\cf2 \cb3 [22,488] | tst f1:57.8, auc:77.9, acc:75.7 | trn f1:65.5, auc:82.9, acc:79.6 loss:0.471\cf2 \cb3 \
+\cf2 \cb3 [24,160] | tst f1:58.1, auc:78.0, acc:75.8 | trn f1:66.2, auc:83.2, acc:80.0 loss:0.468\cf2 \cb3 \
+\cf2 \cb3 [25,508] | tst f1:58.3, auc:78.3, acc:76.0 | trn f1:66.4, auc:83.6, acc:80.1 loss:0.462\cf2 \cb3 \
+\cf2 \cb3 [27,180] | tst f1:58.7, auc:78.3, acc:76.2 | trn f1:66.5, auc:83.5, acc:80.2 loss:0.462\cf2 \cb3 \
+\cf2 \cb3 [28,528] | tst f1:58.7, auc:78.6, acc:76.1 | trn f1:66.4, auc:83.7, acc:80.1 loss:0.460\cf2 \cb3 \
+\cf2 \cb3 [30,200] | tst f1:58.3, auc:78.5, acc:76.0 | trn f1:66.8, auc:83.8, acc:80.3 loss:0.459\cf2 \cb3 \
+\cf2 \cb3 [31,548] | tst f1:58.6, auc:78.7, acc:76.1 | trn f1:66.8, auc:84.0, acc:80.5 loss:0.455\cf2 \cb3 \
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 python run_cf\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec4 py --repository gdsc --max_iter \cf2 \cb3 \strokec6 14536\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec7 [0,0] | tst f1:41.3, auc:50.5, acc:50.1 | trn f1:39.4, auc:49.8, acc:49.7 loss:6.002\cf2 \cb3 \
+\cf2 \cb3 [1,348] | tst f1:47.9, auc:62.5, acc:62.8 | trn f1:43.2, auc:57.1, acc:58.1 loss:3.453\cf2 \cb3 \
+\cf2 \cb3 [3,20] | tst f1:48.3, auc:62.6, acc:63.4 | trn f1:49.3, auc:65.4, acc:65.7 loss:0.724\cf2 \cb3 \
+\cf2 \cb3 [4,368] | tst f1:47.6, auc:63.0, acc:63.7 | trn f1:49.7, auc:66.2, acc:66.5 loss:0.719\cf2 \cb3 \
+\cf2 \cb3 [6,40] | tst f1:48.7, auc:64.1, acc:64.4 | trn f1:50.1, auc:66.9, acc:66.9 loss:0.712\cf2 \cb3 \
+\cf2 \cb3 [7,388] | tst f1:49.2, auc:64.4, acc:64.8 | trn f1:50.3, auc:66.9, acc:67.3 loss:0.710\cf2 \cb3 \
+\cf2 \cb3 [9,60] | tst f1:51.8, auc:69.6, acc:68.1 | trn f1:51.8, auc:70.5, acc:69.0 loss:0.611\cf2 \cb3 \
+\cf2 \cb3 [10,408] | tst f1:54.0, auc:72.2, acc:70.4 | trn f1:55.8, auc:75.3, acc:73.0 loss:0.561\cf2 \cb3 \
+\cf2 \cb3 [12,80] | tst f1:54.9, auc:73.6, acc:71.6 | trn f1:58.3, auc:77.4, acc:75.0 loss:0.540\cf2 \cb3 \
+\cf2 \cb3 [13,428] | tst f1:56.1, auc:74.8, acc:72.6 | trn f1:60.5, auc:79.3, acc:76.7 loss:0.514\cf2 \cb3 \
+\cf2 \cb3 [15,100] | tst f1:56.8, auc:75.5, acc:73.2 | trn f1:61.5, auc:80.0, acc:77.5 loss:0.507\cf2 \cb3 \
+\cf2 \cb3 [16,448] | tst f1:57.8, auc:76.0, acc:73.9 | trn f1:62.2, auc:80.8, acc:78.2 loss:0.495\cf2 \cb3 \
+\cf2 \cb3 [18,120] | tst f1:57.0, auc:76.2, acc:73.6 | trn f1:63.1, auc:81.4, acc:78.7 loss:0.486\cf2 \cb3 \
+\cf2 \cb3 [19,468] | tst f1:58.0, auc:76.6, acc:74.2 | trn f1:63.6, auc:81.8, acc:78.9 loss:0.484\cf2 \cb3 \
+\cf2 \cb3 [21,140] | tst f1:57.7, auc:76.8, acc:74.0 | trn f1:63.8, auc:82.0, acc:79.2 loss:0.479\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 python run_cf.py --repository gdsc --max_iter 100000 --test_inc_size 10000\cf2 \cb3 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 55 minutes\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 [0,0] | tst f1:40.2, auc:52.2, acc:52.0 | trn f1:33.4, auc:51.3, acc:51.9 loss:5.837\cf2 \cb3 \
+\cf2 \cb3 [14,536] | tst f1:54.5, auc:73.5, acc:71.0 | trn f1:50.6, auc:64.8, acc:66.7 loss:1.041\cf2 \cb3 \
+\cf2 \cb3 [29,396] | tst f1:59.5, auc:79.2, acc:75.9 | trn f1:62.0, auc:80.0, acc:77.4 loss:0.507\cf2 \cb3 \
+\cf2 \cb3 [44,256] | tst f1:61.4, auc:81.4, acc:77.2 | trn f1:65.8, auc:83.4, acc:80.2 loss:0.459\cf2 \cb3 \
+\cf2 \cb3 [59,116] | tst f1:62.5, auc:82.4, acc:77.8 | trn f1:67.3, auc:84.9, acc:81.2 loss:0.437\cf2 \cb3 \
+\cf2 \cb3 [73,652] | tst f1:65.3, auc:83.5, acc:78.4 | trn f1:68.3, auc:86.0, acc:81.7 loss:0.421\cf2 \cb3 \
+\cf2 \cb3 [88,512] | tst f1:64.6, auc:83.9, acc:78.6 | trn f1:68.8, auc:86.7, acc:81.9 loss:0.411\cf2 \cb3 \
+\cf2 \cb3 [103,372] | tst f1:64.3, auc:83.8, acc:78.6 | trn f1:68.9, auc:87.1, acc:82.0 loss:0.406\cf2 \cb3 \
+\cf2 \cb3 [118,232] | tst f1:63.8, auc:83.7, acc:78.5 | trn f1:69.0, auc:87.3, acc:82.1 loss:0.404\cf2 \cb3 \
+\cf2 \cb3 [133,92] | tst f1:64.0, auc:83.7, acc:78.5 | trn f1:69.3, auc:87.5, acc:82.2 loss:0.401\cf2 \cb3 \
+\cf2 \cb3 [147,628] | tst f1:64.2, auc:83.8, acc:78.6 | trn f1:69.6, auc:87.8, acc:82.4 loss:0.397\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+\
+Without Attention:\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 python run_cf\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec4 py --repository gdsc --max_iter \cf2 \cb3 \strokec6 7268\cf2 \cb3 \strokec4  --use_attention False\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec7 \
+\cf2 \cb3 [0,0] | tst f1:39.6, auc:51.0, acc:50.6 | trn f1:41.8, auc:51.3, acc:50.6 loss:1.001\cf2 \cb3 \
+\cf2 \cb3 [1,348] | tst f1:41.1, auc:54.4, acc:54.0 | trn f1:39.4, auc:52.6, acc:52.1 loss:0.959\cf2 \cb3 \
+\cf2 \cb3 [3,20] | tst f1:44.4, auc:59.8, acc:58.8 | trn f1:42.6, auc:58.0, acc:56.9 loss:0.824\cf2 \cb3 \
+\cf2 \cb3 [4,368] | tst f1:47.3, auc:64.1, acc:63.2 | trn f1:46.7, auc:64.0, acc:62.5 loss:0.711\cf2 \cb3 \
+\cf2 \cb3 [6,40] | tst f1:50.7, auc:68.3, acc:67.0 | trn f1:50.8, auc:69.3, acc:67.4 loss:0.632\cf2 \cb3 \
+\cf2 \cb3 [7,388] | tst f1:51.9, auc:70.1, acc:68.8 | trn f1:54.5, auc:72.9, acc:70.9 loss:0.584\cf2 \cb3 \
+\cf2 \cb3 [9,60] | tst f1:54.1, auc:71.8, acc:70.5 | trn f1:56.4, auc:75.0, acc:72.8 loss:0.557\cf2 \cb3 \
+\cf2 \cb3 [10,408] | tst f1:54.2, auc:72.5, acc:71.0 | trn f1:58.0, auc:76.0, acc:74.0 loss:0.544\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 python run_cf\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec4 py --repository gdsc --max_iter \cf2 \cb3 \strokec6 14536\cf2 \cb3 \strokec4  --use_attention False\cf2 \cb3 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 [0,0] | tst f1:37.4, auc:49.2, acc:48.9 | trn f1:41.4, auc:49.7, acc:49.7 loss:1.058\cf2 \cb3 \
+\cf2 \cb3 [1,348] | tst f1:39.2, auc:52.3, acc:51.6 | trn f1:38.7, auc:50.7, acc:50.6 loss:1.011\cf2 \cb3 \
+\cf2 \cb3 [3,20] | tst f1:41.9, auc:56.8, acc:56.1 | trn f1:40.7, auc:55.3, acc:54.7 loss:0.885\cf2 \cb3 \
+\cf2 \cb3 [4,368] | tst f1:45.0, auc:61.8, acc:60.5 | trn f1:44.6, auc:60.6, acc:59.4 loss:0.772\cf2 \cb3 \
+\cf2 \cb3 [6,40] | tst f1:48.2, auc:65.9, acc:64.6 | trn f1:48.1, auc:65.7, acc:64.2 loss:0.684\cf2 \cb3 \
+\cf2 \cb3 [7,388] | tst f1:51.3, auc:69.5, acc:68.0 | trn f1:51.8, auc:69.8, acc:68.1 loss:0.622\cf2 \cb3 \
+\cf2 \cb3 [9,60] | tst f1:52.9, auc:71.7, acc:70.4 | trn f1:55.2, auc:73.5, acc:71.5 loss:0.575\cf2 \cb3 \
+\cf2 \cb3 [10,408] | tst f1:55.1, auc:73.7, acc:72.2 | trn f1:57.6, auc:75.9, acc:73.9 loss:0.544\cf2 \cb3 \
+\cf2 \cb3 [12,80] | tst f1:56.4, auc:75.3, acc:73.5 | trn f1:59.4, auc:77.4, acc:75.2 loss:0.527\cf2 \cb3 \
+\cf2 \cb3 [13,428] | tst f1:57.9, auc:76.5, acc:74.7 | trn f1:61.2, auc:78.9, acc:76.7 loss:0.509\cf2 \cb3 \
+\cf2 \cb3 [15,100] | tst f1:57.9, auc:76.9, acc:75.0 | trn f1:62.1, auc:79.8, acc:77.6 loss:0.498\cf2 \cb3 \
+\cf2 \cb3 [16,448] | tst f1:59.0, auc:77.5, acc:75.7 | trn f1:62.9, auc:80.5, acc:78.2 loss:0.490\cf2 \cb3 \
+\cf2 \cb3 [18,120] | tst f1:59.5, auc:78.1, acc:76.1 | trn f1:63.3, auc:80.7, acc:78.4 loss:0.488\cf2 \cb3 \
+\cf2 \cb3 [19,468] | tst f1:59.6, auc:78.1, acc:76.2 | trn f1:63.6, auc:81.1, acc:78.6 loss:0.484\cf2 \cb3 \
+\cf2 \cb3 [21,140] | tst f1:59.5, auc:78.5, acc:76.1 | trn f1:63.8, auc:81.5, acc:79.0 loss:0.478\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 python run_cf\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec4 py --repository gdsc --max_iter \cf2 \cb3 \strokec6 22128\cf2 \cb3 \strokec4  --use_attention False\cf2 \cb3 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 [0,0] | tst f1:40.6, auc:52.1, acc:52.0 | trn f1:39.7, auc:51.4, acc:52.4 loss:1.017\cf2 \cb3 \
+\cf2 \cb3 [1,348] | tst f1:42.1, auc:54.6, acc:54.0 | trn f1:39.2, auc:52.5, acc:52.2 loss:0.986\cf2 \cb3 \
+\cf2 \cb3 [3,20] | tst f1:43.5, auc:57.4, acc:56.7 | trn f1:41.8, auc:56.2, acc:55.6 loss:0.885\cf2 \cb3 \
+\cf2 \cb3 [4,368] | tst f1:45.7, auc:61.6, acc:60.2 | trn f1:44.5, auc:60.5, acc:59.3 loss:0.785\cf2 \cb3 \
+\cf2 \cb3 [6,40] | tst f1:48.8, auc:65.7, acc:64.0 | trn f1:47.5, auc:65.4, acc:63.6 loss:0.696\cf2 \cb3 \
+\cf2 \cb3 [7,388] | tst f1:51.0, auc:68.2, acc:67.1 | trn f1:51.2, auc:69.3, acc:67.4 loss:0.634\cf2 \cb3 \
+\cf2 \cb3 [9,60] | tst f1:53.2, auc:70.9, acc:69.5 | trn f1:54.2, auc:72.6, acc:70.6 loss:0.589\cf2 \cb3 \
+\cf2 \cb3 [10,408] | tst f1:54.5, auc:72.7, acc:71.1 | trn f1:56.8, auc:75.1, acc:73.0 loss:0.556\cf2 \cb3 \
+\cf2 \cb3 [12,80] | tst f1:56.7, auc:74.7, acc:73.0 | trn f1:58.8, auc:77.0, acc:75.0 loss:0.531\cf2 \cb3 \
+\cf2 \cb3 [13,428] | tst f1:57.4, auc:75.7, acc:73.8 | trn f1:60.5, auc:78.4, acc:76.4 loss:0.513\cf2 \cb3 \
+\cf2 \cb3 [15,100] | tst f1:57.7, auc:76.3, acc:74.2 | trn f1:61.9, auc:79.4, acc:77.5 loss:0.501\cf2 \cb3 \
+\cf2 \cb3 [16,448] | tst f1:58.4, auc:76.9, acc:74.9 | trn f1:62.7, auc:80.4, acc:78.3 loss:0.489\cf2 \cb3 \
+\cf2 \cb3 [18,120] | tst f1:58.5, auc:77.6, acc:75.1 | trn f1:63.7, auc:81.1, acc:78.9 loss:0.481\cf2 \cb3 \
+\cf2 \cb3 [19,468] | tst f1:59.7, auc:78.0, acc:75.9 | trn f1:64.4, auc:81.8, acc:79.4 loss:0.475\cf2 \cb3 \
+\cf2 \cb3 [21,140] | tst f1:60.2, auc:78.9, acc:76.3 | trn f1:64.8, auc:82.3, acc:79.9 loss:0.468\cf2 \cb3 \
+\cf2 \cb3 [22,488] | tst f1:60.6, auc:79.3, acc:76.6 | trn f1:65.5, auc:82.7, acc:80.0 loss:0.467\cf2 \cb3 \
+\cf2 \cb3 [24,160] | tst f1:60.3, auc:79.6, acc:76.5 | trn f1:65.2, auc:82.7, acc:80.1 loss:0.465\cf2 \cb3 \
+\cf2 \cb3 [25,508] | tst f1:60.3, auc:79.7, acc:76.6 | trn f1:66.1, auc:83.4, acc:80.7 loss:0.458\cf2 \cb3 \
+\cf2 \cb3 [27,180] | tst f1:60.9, auc:79.8, acc:76.8 | trn f1:66.0, auc:83.3, acc:80.4 loss:0.461\cf2 \cb3 \
+\cf2 \cb3 [28,528] | tst f1:60.6, auc:79.9, acc:76.8 | trn f1:66.5, auc:83.8, acc:81.1 loss:0.454\cf2 \cb3 \
+\cf2 \cb3 [30,200] | tst f1:61.0, auc:79.9, acc:77.0 | trn f1:66.1, auc:83.5, acc:80.5 loss:0.459\cf2 \cb3 \
+\cf2 \cb3 [31,548] | tst f1:60.8, auc:80.1, acc:76.9 | trn f1:66.4, auc:83.8, acc:81.0 loss:0.454\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+Logistic Regression:\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 python run_simple_logistic_regression\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec4 py\cf2 \cb3 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 Mean AUC: 62.8%\cf2 \cb3 \
+\cf2 \cb3 Mean F1: 31.3%\cf2 \cb3 \
+\cf2 \cb3 Mean Accuracy: 78.1%\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 python run_simple_logistic_regression\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec4 py\cf2 \cb3 \strokec7 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 Mean AUC: 62.6%\cf2 \cb3 \
+\cf2 \cb3 Mean F1: 29.6%\cf2 \cb3 \
+\cf2 \cb3 Mean Accuracy: 78.2%\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 python run_simple_logistic_regression.py\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 100000 iterations\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 Logistic Regression (max_iter=200):\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0Test AUC: 61.72%\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0Test F1:\'a0 30.83%\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0Test ACC: 77.78%\cf2 \cb3 \
+\
+\cf2 \cb3 CADRE (from paper, 147,628 steps):\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0Test AUC: 83.8%\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0Test F1:\'a0 64.2%\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0Test ACC: 78.6%\cf2 \cb3 \
+\
+\cf2 \cb3 Improvement (CADRE over LR):\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0AUC: +22.1 percentage points\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0F1:\'a0 +33.4 percentage points\cf2 \cb3 \
+\
+\cf2 \cb3 \'a0cadre_step\'a0 lr_max_iter\'a0 test_auc\'a0 test_f1\'a0 test_acc\'a0 n_valid_drugs\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a00\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 1\'a0 0.582205 0.145442\'a0 0.789007\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0\'a0\'a07268 \'a0 \'a0 \'a0 \'a0 \'a0 10\'a0 0.641551 0.330101\'a0 0.780877\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0\'a014536 \'a0 \'a0 \'a0 \'a0 \'a0 20\'a0 0.626208 0.316922\'a0 0.776493\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0\'a022128 \'a0 \'a0 \'a0 \'a0 \'a0 30\'a0 0.621063 0.312873\'a0 0.779128\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0\'a029396 \'a0 \'a0 \'a0 \'a0 \'a0 40\'a0 0.618937 0.309002\'a0 0.778310\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0\'a044256 \'a0 \'a0 \'a0 \'a0 \'a0 60\'a0 0.617504 0.309417\'a0 0.778401\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0\'a059116 \'a0 \'a0 \'a0 \'a0 \'a0 80\'a0 0.617220 0.308400\'a0 0.777720\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0\'a073652\'a0 \'a0 \'a0 \'a0 \'a0 100\'a0 0.617172 0.308333\'a0 0.777811\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0\'a088512\'a0 \'a0 \'a0 \'a0 \'a0 120\'a0 0.617173 0.308333\'a0 0.777811\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0103372\'a0 \'a0 \'a0 \'a0 \'a0 140\'a0 0.617173 0.308333\'a0 0.777811\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0118232\'a0 \'a0 \'a0 \'a0 \'a0 160\'a0 0.617173 0.308333\'a0 0.777811\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0133092\'a0 \'a0 \'a0 \'a0 \'a0 180\'a0 0.617173 0.308333\'a0 0.777811\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\cf2 \cb3 \'a0\'a0\'a0\'a0\'a0147628\'a0 \'a0 \'a0 \'a0 \'a0 200\'a0 0.617173 0.308333\'a0 0.777811\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 259\cf2 \cb3 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \
+\
+}
